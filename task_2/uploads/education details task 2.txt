@@ -1,0 +1,15 @@
+Educational details
+
+firstname, lastname, username -> only alphabet and spaces
+gender
+city
+dob -> format (28 Jan 2023) 
+emailid - > email validation
+phone number -> only numbers
+address - > country, state, pincode(only 6 num)
+educational details - > 10th,12th,ug,pg (any 1 required)
+profile image -> upload, remove(only img)
+attached files - proof(only doc/txt/img/pdf) with download option
+
+
+output in another page

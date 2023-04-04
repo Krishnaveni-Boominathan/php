@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <nav>
+        <div class="menu">
+          <div class="logo">
+            <a href="#">Tutorial</a>
+          </div>
+           <ul>
+            <li><a href="https://www.w3schools.com/html/default.asp">HTML</a></li>
+            <li><a href="https://www.w3schools.com/css/default.asp">CSS</a></li>
+            <li><a href="https://www.w3schools.com/js/default.asp">JAVASCRIPT</a></li>
+            <li><a href="https://www.w3schools.com/php/default.asp">PHP</a></li>
+           </ul>  
+        </div>
+    </nav>
+    <div class="img"></div>
+    <div class="center">
+        <div class="title">Creating Websites</div>
+        <!-- <div class="sub_title">HTML & CSS</div> -->
+        <div class="btns">
+            <button onclick="window.location.href= 'https://www.w3schools.com/about/#:~:text=W3Schools%20is%20a%20school%20for,JavaScript%20Tutorial';">Learn More</button>
+            <button onclick="window.location.href= 'https://profile.w3schools.com/sign-up';">Sign-up</button>
+        </div>
+    </div>
+ 
+</body>
+</html>
