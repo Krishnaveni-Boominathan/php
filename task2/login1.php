@@ -212,7 +212,7 @@ if (empty($_POST["college"])) {
     
       if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $file_upload)) {
        // $img1 = "<a href=".$file_upload." download>Download the attachment </a>";
-        $img1 = "<a href=".$file_upload.">Download the attachment </a>";
+        $img1 = "<a href=".$file_upload." download >Download the attachment </a>";
        
         
       }else{
