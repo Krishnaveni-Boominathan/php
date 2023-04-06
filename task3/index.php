@@ -3,7 +3,7 @@
     <head>    
     </head>
     <body>
-        <form  id="myForm" method="post" action="login.php" >
+        <form  id="myForm" method="post"  >
  
             <label for="fname">First name</label><br>
             <input type="text"  name="fname" id="fname">
