@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
   <head>
-    <meta charset="utf-8">
     <title>Add User</title>
   </head>
   <body>
     <h2>Add User</h2>
-    <form autocomplete="off" action="" method="post">
+    <form action="" method="post">
       <label for="">Name</label>
       <input type="text" id="name" value=""> <br>
       <label for="">Email</label>
@@ -20,7 +19,7 @@
     </form>
     <br>
     <a href="index.php">Go To Index</a>
-    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
 </script>
 <script>
   function submitData(action){

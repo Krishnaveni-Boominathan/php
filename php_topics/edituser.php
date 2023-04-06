@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
   <head>
     <meta charset="utf-8">
     <title>Edit User</title>
   </head>
   <body>
     <h2>Edit User</h2>
-    <form autocomplete="off" action="" method="post">
+    <form action="" method="post">
       <?php
       require 'config.php';
       $id = $_GET["id"];
-      $rows = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM users WHERE id = $id"));
+      $sql="SELECT * FROM users WHERE id = $id";
+      $rows = mysqli_fetch_assoc(mysqli_query($conn, $sql));
       ?>
       <input type="hidden" id="id" value="<?php echo $rows['id']; ?>">
       <label for="">Name</label>
@@ -26,7 +27,7 @@
     </form>
     <br>
     <a href="index.php">Go To Index</a>
-    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
 </script>
 <script>
   function submitData(action){
