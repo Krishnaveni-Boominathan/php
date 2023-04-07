@@ -61,6 +61,7 @@
         
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
     <script>
         // $(document).ready(function(){
         //   $("#myForm").submit(function(event){
@@ -86,6 +87,13 @@
         //   });
 
         $(document).ready(function(){
+            $('#myForm').validate({
+                rules:{
+                    fname: "required"
+                }, message:{
+                    fname: "Please enter your name"
+                }
+            });
         $('.drive').click(function(){
         var selectedValue = $(this).val();
         if(selectedValue == 'yes'){
