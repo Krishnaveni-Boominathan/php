@@ -87,13 +87,6 @@
         //   });
 
         $(document).ready(function(){
-            $('#myForm').validate({
-                rules:{
-                    fname: "required"
-                }, message:{
-                    fname: "Please enter your name"
-                }
-            });
         $('.drive').click(function(){
         var selectedValue = $(this).val();
         if(selectedValue == 'yes'){
