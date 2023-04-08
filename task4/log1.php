@@ -1,9 +1,5 @@
 <?php
- 
-include "database.php";
-
-
-    session_start();    
+  session_start();    
     if(isset($_POST['uname']) && isset($_POST['password'])){
         $uname= $_POST['uname'];
         $password = $_POST['password'];
@@ -11,7 +7,9 @@ include "database.php";
     }
    
 ?>
-
+<?php
+include "database.php"
+?>
 
 <!DOCTYPE html>
 <html>
