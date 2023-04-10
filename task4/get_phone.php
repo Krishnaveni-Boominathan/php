@@ -3,15 +3,17 @@ include 'database.php';
  session_start();
 
 
-if(isset($_POST['phone_number'])){
-            $phone = $_POST['phone_number'];
-            $sql = "SELECT phone_number FROM registration WHERE phone_number= '$phone'";
+if(!empty($_POST['number'])){
+           // $phone = $_POST['number'];
+            $sql = "SELECT * FROM registration WHERE phone_number='". $_POST["number"]."'";
             $results = mysqli_query($con,$sql);
             if(mysqli_num_rows($results)>0){
-                    echo 'exists';
-                    exit;
+                    echo 'Phone number already exists';
+                    
+                    //exit;
             }else{
-                echo 'availabe';
+                echo 'Phone number available';
+               //
             }
 }
 ?>
