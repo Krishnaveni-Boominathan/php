@@ -1,23 +1,4 @@
-<?php
-    // session_start();
-    // $_SESSION['fname'] = $_POST['fname'];
-    // $_SESSION['lname'] = $_POST['lname'];
-    // $_SESSION['uname'] = $_POST['uname'];
-    // $_SESSION['password'] = $_POST['password'];
-    // $_SESSION['email'] = $_POST['email'];
-    // $_SESSION['number'] = $_POST['number'];
-    // $_SESSION['dob'] = $_POST['dob'];
-    // $_SESSION['age'] = $_POST['age'];
-    // $_SESSION['gender'] = $_POST['gender'];
-    // $_SESSION['drive'] = $_POST['drive'];
-    // $_SESSION['licensenumber'] = $_POST['licensenumber'];
-    // $_SESSION['college'] = $_POST['college'];
-    // $_SESSION['degree'] = $_POST['degree'];
-    // $_SESSION['address'] = $_POST['address'];
-    // $_SESSION['state'] = $_POST['state'];
-    // $_SESSION['country'] = $_POST['country'];
-    // $_SESSION['code'] = $_POST['code'];
-  
+<?php 
  
  include 'database.php';
  session_start();
@@ -39,17 +20,20 @@
         $password = $_POST['password'];
        
         $email    = $_POST['email'];
-       
-        if(isset($_POST['number'])){
-            $phone = $_POST['number'];
-            $sql = "SELECT phone_number FROM registration WHERE phone_number= '$number'";
-            $results = mysqli_query($con,$sql);
-            if(mysqli_num_rows($results)>0){
-           echo 'exists';
-        }else{
-           echo 'available';
-        }
-        }
+        $phone = $_POST['number'];
+        // if(isset($_POST['number'])){
+        //     $phone = $_POST['number'];
+        //     $sql = "SELECT * FROM registration WHERE phone_number= '$phone'";
+        //     $results = mysqli_query($con,$sql);
+        //     if(mysqli_num_rows($results)>0){
+        //             echo 'exists';
+        //     }else{
+        //         $    = "INSERT into registration (first_name,last_name,user_name,password,email,phone_number,age, type) 
+        //             VALUES ('$firstname',' $lastname','$username',  '$password','$email', '$phone', '$age', '$type')";
+        //         mysqli_query($con, $query);
+        //         echo 'available';
+        //         }
+        // }
         
     
         $age = $_POST['age'];
@@ -59,7 +43,7 @@
                     VALUES ('$firstname',' $lastname','$username',  '$password','$email', '$phone', '$age', '$type')";
         $result   = mysqli_query($con, $query);
        
-        echo "new data";
+        //echo "new data";
     
         if($result){
             

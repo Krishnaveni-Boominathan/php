@@ -25,15 +25,15 @@
         <label for="email">Email Id</label><br>
         <input type="email" name="email" id="email">
         <br><br>
-        <label for="number">Phone Number</label><br>
-        <input type="text" name="number" id="number">
+        <label for="phone_number">Phone Number</label><br>
+        <input type="text" name="phone_number" id="phone_number">
         <span id="phone-number-status"></span>
         <br><br>
         <label for="age">Age</label><br>
         <input type="text" name="age" id="age">
         <br><br>
         <div id="phone_number_field" style="display: none;">
-            <label for="phone-number">Enter your Phone Number:</label>
+            <label for="phonenumber">Enter your Phone Number:</label>
             <input type="text" name="phonenumber">
         </div><br><br>
         <label for="type">Type:</label>
@@ -63,28 +63,48 @@
                 }
 
             });
-            $('#number').blur(function () {
-                var number = $('#number').val();
-
-                if (number == 'exists') {
-                   $('#phone_number_field').text('This phone number is already registered');
-                }else{
-                    $('#phone_number_field').text('This phone number is available');
-                }
-                
-
-            });
         });
-        $("#register_form").on('submit',(function(e){
-                e.preventDefault();
+// $(document).ready(function () {
+
+// $('#phone_number').blur(function () {
+//     var phone = $('#phone_number').val();
+//     $.ajax({
+//                     type: 'POST',
+//                     url: 'get_phone.php',
+//                     data: $(this).serialize(),
+//                     success: function(data) {
+//                         if ('#phone_number' == 'exists') {
         
-         
-        // e.preventDefault();
+//                             $('#phone-number-status').text('This phone number is already registered');
+//                         }else{
+//                             $('#phone-number-status').text('This phone number is available');
+//                         }
+//                        // alert('This phone number is already registered');
+                      
+
+//                     }
+                    
+                    
+//                     });
+
+//     // if (phone == 'exists') {
+        
+//     //    $('#phone-number-status').text('This phone number is already registered');
+//     // }else{
+//     //     $('#phone-number-status').text('This phone number is available');
+//     // }
+    
+
+// });
+// });
+
+        $("#register_form").on('submit',(function(e){
+                e.preventDefault();              
                 var firstname = $('#fname').val();
                 var lastname = $('#lname').val();
                 var username = $('#uname').val();
                 var email = $('#email').val();
-                var number = $('#number').val();
+                var number = $('#phone_number').val();
                 var password = $('#password').val();
                 var age = $('#age').val();
                 var type = $('#type').val();
@@ -105,6 +125,7 @@
                     //    console.log(data);
                      // alert(data);
                         alert('Registration Successful!');
+                       // window.location.href = 'login.php';
 
                     },
                     error: function () {
@@ -114,7 +135,7 @@
                     
                     
                     });
-                    $('#register_form')[0].reset();
+                   $('#register_form')[0].reset();
                 }
   }));
 
