@@ -13,7 +13,7 @@ if(!empty($_POST['number'])){
                     //exit;
             }else{
                 echo 'Phone number available';
-               //
+              
             }
 }
 ?>
