@@ -34,7 +34,7 @@
         <br><br>
         <div id="phone_number_field" style="display: none;">
             <label for="phone-number">Enter your Phone Number:</label>
-            <input type="text" name="phonenumber">
+            <input type="text" name="phonenumber" id="phonenumber">
         </div><br><br>
         <label for="type">Type:</label>
         <select id="type" name="type">
@@ -54,7 +54,6 @@
          $(document).ready(function () {
             $('#age').blur(function () {
                 var age = $('#age').val();
-
                 if (age < 18) {
                     $('#phone_number_field').show();
                 }
@@ -107,6 +106,7 @@ $('#number').blur(function () {
                 var age = $('#age').val();
                 var type = $('#type').val();
                 var check = $('#check').val();
+                var phonenumber = $('#phonenumber').val();
                 if(firstname == '' || lastname == '' || username == '' || password == '' || email == '' || number == '' || age == '' || type == ''){
 					alert("Please fill all fields.");
                  }
@@ -123,7 +123,7 @@ $('#number').blur(function () {
                     //    console.log(data);
                      // alert(data);
                         alert('Registration Successful!');
-                        window.location.href = 'login.php';
+                      //  window.location.href = 'login.php';
 
                     },
                     error: function () {

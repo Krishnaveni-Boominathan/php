@@ -33,15 +33,24 @@
             if(mysqli_num_rows($results)>0){
                     echo 'exists';
                    // exit;
-            }else{
-               
-                        $query    = "INSERT into registration (first_name,last_name,user_name,password,email,phone_number,age, type) 
+            // }else if(isset($_POST['age']) < 18){
+            //     $phonenumber = $_POST['phonenumber'];
+            //     $stmt    = "INSERT into registration (first_name,last_name,user_name,password,email,phone_number,age, type,number) 
+            //                   VALUES ('$firstname',' $lastname','$username',  '$password','$email', '$phone', '$age', '$type','$phonenumber')";
+            //     $output   = mysqli_query($con, );
+            //     if($output){
+            //         echo "registered";
+            //     }else{
+            //         echo "not registered";
+            //     }
+            }   else{
+                    $query    = "INSERT into registration (first_name,last_name,user_name,password,email,phone_number,age, type) 
                                     VALUES ('$firstname',' $lastname','$username',  '$password','$email', '$phone', '$age', '$type')";
-                        $result   = mysqli_query($con, $query);
+                    $result   = mysqli_query($con, $query);
                     
                         //echo "new data";
                     
-                        if($result){
+                    if($result){
                             
                             echo "<div class='form'>
                             <h3>You are registered successfully.</h3><br/>
